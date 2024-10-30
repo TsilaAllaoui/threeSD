@@ -84,7 +84,7 @@ jobs:
           submodules: recursive
       - name: Install Qt5 (Windows)
         run: |
-          choco install qt5 -y
+          choco install qt5 -y --accept-license
           echo "C:\Qt\5.15.2\msvc2019_64\bin" >> $env:GITHUB_PATH
       - name: Set up cache
         uses: actions/cache@v2

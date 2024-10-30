@@ -1,11 +1,6 @@
 name: threeSD-ci
 
-on:
-  push:
-    branches: [ "*" ]
-    tags: [ "*" ]
-  pull_request:
-    branches: [ master ]
+on: workflow_call
 
 jobs:
   build:

@@ -1,6 +1,11 @@
 name: threeSD-ci
 
-on: workflow_call
+on:
+  workflow_dispatch:  # Allows manual trigger
+  push:               # Triggers on push events
+    branches:
+      - main          # Specify the branches to trigger on (e.g., main)
+  workflow_call:      # Keeps workflow callable from other workflows
 
 jobs:
   build:

@@ -85,23 +85,13 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
-            version: '5.15.2'
-            host: 'windows'
-            target: 'desktop'
-            arch: 'win64_msvc2019_64'
-            dir: '${{ github.workspace }}/QT/'
-            install-deps: 'true'
-            modules: 'qtcharts qtwebengine'
-            archives: 'qtbase qtsvg'
-            cache: 'false'
-            cache-key-prefix: 'install-qt-action'
-            setup-python: 'true'
-            tools: 'tools_ifw tools_qtcreator,qt.tools.qtcreator'
-            set-env: 'true'
-            tools-only: 'false'
-            aqtversion: '==3.1.*'
-            py7zrversion: '==0.20.*'
-            extra: '--external 7z'
+          version:      '5.15.2'
+          host:         windows
+          target:       desktop
+          arch:         win64_msvc2019_64
+          dir:          ${{ github.workspace }}
+          modules:      qtcharts qt3d
+          setup-python: false
       - name: Set up cache
         uses: actions/cache@v2
         with:
